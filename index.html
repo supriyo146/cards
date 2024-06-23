@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        body {
+            background-color: black;
+            padding: 0;
+            scroll-behavior: smooth;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            box-sizing: border-box; /* Ensuring box-sizing is border-box */
+        }
+
+        .container {
+            background-color: grey;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding: 50px 0;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            height: 450px;
+            border-radius: 7px;
+            padding: 20px;
+            text-align: justify;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transform transition */
+        }
+
+        .card:hover {
+            box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.8);
+            transform: scale(1.05); /* Added scale transform */
+        }
+
+        .image img {
+            border-radius: 7px;
+        }
+
+        .content p {
+            font-size: 13px;
+            color: gray;
+        }
+
+        .capsule {
+            padding: 0 10px;
+        }
+
+        .capsule span {
+            border: 1px solid gray;
+            padding: 0px 6px;
+            border-radius: 7px;
+            font-size: 13px;
+            margin: 0 0px;
+            color: black;
+            
+        }
+
+        .capsule span:hover {
+            background-color: aqua;
+        }
+
+        .button button {
+            padding: 10px 35px;
+            border-radius: 10px;
+            background-color: aqua;
+            border: none;
+            color: rgb(93, 93, 234);
+            font-size: 10px;
+            margin-top: 7px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button button:hover {
+            background-color: rgb(2, 227, 227);
+            color: rgb(152, 152, 245);
+        }
+
+        nav {
+            background-color: black;
+            padding: 30px;
+            color: white;
+            text-align: center;
+        }
+
+        ul li {
+            list-style: none;
+            display: inline;
+            padding: 10px;
+            margin: 10px;
+            font-size: large;
+        }
+
+        a:visited,
+        a:after,
+        a:link,
+        a:active {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(171, 171, 171);
+            text-decoration: underline;
+        }
+
+        .about {
+            background-color: black;
+            border-radius: 7px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            color: white;
+        }
+
+        .contact {
+            background-color: black;
+            border-radius: 7px;
+            padding: 20px;
+            width: 30%;
+            margin: 20px auto;
+            text-align: left;
+            color: white;
+        }
+
+        .about h2,
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact label {
+            font-weight: bold;
+        }
+
+        .contact input,
+        .contact textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .contact button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: aqua;
+            color: rgb(93, 93, 234);
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .contact button:hover {
+            background-color: rgb(2, 227, 227);
+            color: rgb(152, 152, 245);
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container h2 {
+            color: black;
+        }
+    </style>
+</head>
+<header>
+    <nav>
+        <ul>
+            <a href="#home">
+                <li>Home </li>
+            </a>
+            <a href="#about">
+                <li>About </li>
+            </a>
+            <a href="#contact">
+                <li>Contact </li>
+            </a>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="container" id="home">
+        <div class="card">
+            <div class="image">
+                <img src="instagram.jpg" alt="card" width="188">
+            </div>
+            <div class="capsule">
+                <span>Instagram</span>
+                <span>Social Media</span>
+            </div>
+            <div class="content">
+                <h2>Supriyo Paul</h2>
+                <p>Capturing moments, one frame at a time, and sharing my world through the lens, I turn everyday scenes
+                    into art, keeping life in focus.</p>
+            </div>
+            <div class="button">
+                <a href="https://www.instagram.com/supriyofficial/" target="_blank"><button>Checkout</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="linkedin.jpg" alt="card" width="188">
+            </div>
+            <div class="capsule">
+                <span>LinkedIn</span>
+                <span>Networking</span>
+            </div>
+            <div class="content">
+                <h2>Supriyo Paul</h2>
+                <p>I'm keen to dive into the tech world, focusing on blockchain technology and software development. My
+                    goal is to integrate these technologies to enhance efficiency and create robust solutions.</p>
+            </div>
+            <div class="button">
+                <a href="https://www.linkedin.com/in/supriyo146/" target="_blank"><button>Checkout</button></a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="image">
+                <img src="gmail.png" alt="card" width="188">
+            </div>
+            <div class="capsule">
+                <span>Gmail</span>
+                <span>Contact</span>
+            </div>
+            <div class="content">
+                <h2>Supriyo Paul</h2>
+                <p>I use Gmail to stay connected and manage my communications efficiently. Reach out to me for quick
+                    responses, seamless collaboration, and organized correspondence.</p>
+            </div>
+            <div class="button">
+                <a href="mailto:supriyopaul2002@gmail.com" target="_blank"><button>Checkout</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <h2>About</h2>
+        <p>Delving into the tech world with a focus on blockchain technology and software development offers a unique
+            and promising path. Blockchain, a decentralized and secure ledger system, has the potential to revolutionize
+            various industries by providing transparent, immutable, and efficient solutions. By learning software
+            development, one gains the foundational skills to build and manipulate software systems, while integrating
+            blockchain can enhance these systems with added layers of security and reliability. This combination can
+            lead to the creation of innovative applications such as decentralized finance platforms, secure digital
+            identity systems, and transparent supply chain management tools. Understanding both areas allows for the
+            development of more robust and efficient solutions, driving technological advancements and fostering trust
+            in digital interactions. This integrated approach not only enhances technical expertise but also opens up
+            opportunities for contributing to cutting-edge projects and shaping the future of technology.</p>
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>Contact</h2>
+        <form action="mailto:supriyopaul2002@gmail.com" method="post" enctype="text/plain">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Copyright 2024 All rights reserved made by Supriyo Paul</p>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling when clicking navbar links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+
+</html>
